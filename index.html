@@ -16,53 +16,68 @@
   <!-- custom-styles -->
   <link rel="stylesheet" href="assets/css/styles.css">
 
+  <!-- font-awesome -->
+  <script src="https://kit.fontawesome.com/4cc93ec48c.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
 
-  <section id="navbar" class="ct-container-navbar">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ct-navbar">
+  <section id="navbar" class="ct-navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ct-nav-1">
       <div class="container-fluid">
-        <a class="navbar-brand ct-navbar-brand" href="#">sneakers</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <div class="ct-nav-1-1">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand ct-nav-brand" href="#">sneakers</a>
+        </div>
+        
+        <div class="collapse navbar-collapse ct-nav-1-2" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item ct-nav-item">
+            <li class="nav-item ct-nav-12-1">
               <a class="nav-link" href="#">Collections</a>
             </li>
-            <li class="nav-item ct-nav-item">
+            <li class="nav-item ct-nav-12-2">
               <a class="nav-link" href="#">Men</a>
             </li>
-            <li class="nav-item ct-nav-item">
+            <li class="nav-item ct-nav-12-3">
               <a class="nav-link" href="#">Women</a>
             </li>
-            <li class="nav-item ct-nav-item">
+            <li class="nav-item ct-nav-12-4">
               <a class="nav-link" href="#">About</a>
             </li>
-            <li class="nav-item ct-nav-item">
+            <li class="nav-item ct-nav-12-5">
               <a class="nav-link" href="#">Contact</a>
             </li>
           </ul>
-          <ul class="navbar-nav ms-auto">
+
+          
+        </div>
+
+        <div class="ct-nav-1-3">
+
+          <ul class="navbar-nav ms-auto ct-nav-items">
+            
+            <!-- navbar-cart -->
+  
             <li class="nav-item ct-nav-item-cart">
               <a href="#" class="nav-link">
-                <div class="cart-sticky">
-                  <h6 class="cart-item-count">0</h6>
+                <div class="ca-tooltip">
+                  <h6 class="ca-item-count">0</h6>
                 </div>            
                 <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
                     fill="#69707d" fill-rule="nonzero" />
                 </svg>
-              </a>
+              </a>              
               <div class="cart-active">
                 <h6 class="ca-title">Cart</h6>
                 <hr class="ct-hr">
                 <div class="ca-empty">Your cart is empty.</div>
-
+  
                 <!-- add content to the cart -->
                 <div class="ca-contents">
                   <div class="ca-content">
@@ -76,7 +91,7 @@
                       <span class="ca-pt-price"></span>
                       <span class="ca-pt-tprice"></span>
                     </div>
-
+  
                     <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="ca-del-svg">
                       <defs>
                         <path
@@ -92,16 +107,19 @@
                     </button>
                   </div>
                 </div>
-
               </div>
             </li>
+  
+            <!-- navbar-avatar -->
             <li class="nav-item">
               <a href="#" class="nav-link">
                 <img src="assets/images/image-avatar.png" alt="image-avatar" class="avatar-img">
               </a>
             </li>
+  
           </ul>
         </div>
+
       </div>
     </nav>
   </section>
@@ -118,33 +136,29 @@
         <div class="pt-carousel-outer">          
           <div class="pt-carousel-inner">
             <div class="carousel-cancel-btn">
-              <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
-                  fill="#fff" fill-rule="evenodd" />
-              </svg>
+              <span class="cr-cancel-btn-icon"><i class="fa-solid fa-xmark"></i></span>
             </div>
-            <div id="carouselExampleIndicators" class="carousel slide">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false">
               <div class="carousel-inner ct-carousel-inner">
-                <div class="carousel-item active ct-carousel-item">
-                  <img src="assets/images/image-product-1.jpg" class="d-block w-100 cr-pt-img" alt="product-img">
+                <div class="carousel-item ct-cr-item-1">
+                  <img src="assets/images/image-product-1.jpg" class="d-block w-100 cr-pt-img-1" alt="product-img">
                 </div>
-                <div class="carousel-item ct-carousel-item">
-                  <img src="assets/images/image-product-2.jpg" class="d-block w-100 cr-pt-img" alt="product-img">
+                <div class="carousel-item ct-cr-item-2">
+                  <img src="assets/images/image-product-2.jpg" class="d-block w-100 cr-pt-img-2" alt="product-img">
                 </div>
-                <div class="carousel-item ct-carousel-item">
-                  <img src="assets/images/image-product-3.jpg" class="d-block w-100 cr-pt-img" alt="product-img">
+                <div class="carousel-item ct-cr-item-3">
+                  <img src="assets/images/image-product-3.jpg" class="d-block w-100 cr-pt-img-3" alt="product-img">
                 </div>
-                <div class="carousel-item ct-carousel-item">
-                  <img src="assets/images/image-product-4.jpg" class="d-block w-100 cr-pt-img" alt="product-img">
+                <div class="carousel-item ct-cr-item-4">
+                  <img src="assets/images/image-product-4.jpg" class="d-block w-100 cr-pt-img-4" alt="product-img">
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <button class="carousel-control-prev cr-prev-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="cr-prev-btn-icon"><i class="fa-solid fa-chevron-left"></i></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <button class="carousel-control-next cr-next-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="cr-next-btn-icon"><i class="fa-solid fa-chevron-right"></i></span>
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
@@ -182,7 +196,7 @@
     </div>
 
 
-    <!-- hero section product infos -->
+    <!-- hero section product info section -->
     <div class="col-lg-6">
       <div class="pt-info">
         <h6 class="pt-company">SNEAKER COMPANY</h6>
@@ -194,21 +208,26 @@
           <h6 class="pt-discount">50%</h6>
         </div>
         <h5 class="pt-original-price">$250.00</h5>
+
+        <!-- product action section -->
         <div class="pt-action">
           <div class="pt-count-btn">
             <p class="pt-count-sub"><img src="assets/images/icon-minus.svg" alt="icon-minus"></p>
             <p class="pt-count-value">1</p>
             <p class="pt-count-add"><img src="assets/images/icon-plus.svg" alt="icon-plus"></p>
           </div>
-          <button class="btn pt-add-btn">
-            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
-                fill="#fff" fill-rule="nonzero" />
-            </svg>            
-            <p class="cab-txt">Add to cart</p>
-          </button>
+          <div class="pt-atc-btn">
+            <button class="btn atc-btn">
+              <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                  fill="#fff" fill-rule="nonzero" />
+              </svg>            
+              <p class="atc-txt">Add to cart</p>
+            </button>
+          </div>
         </div>
+
       </div>
     </div>
   </section>

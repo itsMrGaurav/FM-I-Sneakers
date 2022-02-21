@@ -22,22 +22,27 @@
   box-sizing: border-box;
 }
 
+html {
+  height: auto;
+  margin: 0px;
+}
+
 body {
   font-family: "Kumbh Sans", sans-serif;
 }
 
 /* navbar-styles */
 
-.ct-container-navbar {
+.ct-navbar {
   padding: 0% 7%;
 }
 
-.ct-navbar {
+.ct-nav-1 {
   background-color: var(--color-white) !important;
   padding: 0;
 }
 
-.ct-navbar-brand {
+.ct-nav-brand {
   font-weight: 800;
   font-size: 2rem;
   padding: 0;
@@ -45,13 +50,17 @@ body {
   margin-right: 40px;
 }
 
-.ct-nav-item {
+li[class*=" ct-nav-12-"] {
   padding: 25px 0;
   border-bottom: 3px solid var(--color-white);
 }
 
-.ct-nav-item:hover {
+li[class*=" ct-nav-12-"]:hover {
   border-color: var(--p-color-1);
+}
+
+.ct-nav-items {
+  flex-direction: row;
 }
 
 .ct-nav-item-cart {
@@ -60,23 +69,23 @@ body {
   margin-right: 30px;
 }
 
-.cart-sticky {
+.ca-tooltip {
   display: none;
   position: absolute;
-  top: 33%;
+  top: 32px;
   right: 106px;
   background-color: var(--p-color-1);
   color: var(--color-white);
   border: 1px solid var(--p-color-1);
   border-radius: 40%;
-  height: 15px;
-  width: 22px;
 }
 
-.cart-item-count {
-  padding: 0 6px;
-  font-size: 12px;
+.ca-item-count {
+  text-align: center;
+  font-size: 10px;
+  padding: 0 7px;
   font-weight: 800;
+  margin: 0;
 }
 
 .cart-active {
@@ -213,11 +222,11 @@ body {
 
 .pt-carousel-outer {
   display: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
+  position: absolute;
   z-index: 3;
   top: 0px;
+  bottom: 0px;
+  right: 0px;
   left: 0px;
   background-color: var(--color-black-1);
 }
@@ -226,18 +235,53 @@ body {
   position: relative;
   width: 40%;
   left: 30%;
-  top: 20px;
+  top: 130px;
 }
 
 .carousel-cancel-btn {
   display: flex;
   justify-content: flex-end;
-  padding-bottom: 20px;
   cursor: pointer;
 }
 
+.cr-cancel-btn-icon {
+  font-size: 24px;
+  color: var(--color-white);
+}
+
+.cr-cancel-btn-icon:hover {
+  color: var(--p-color-1);
+}
+
+.cr-prev-btn,
+.cr-next-btn {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  background-color: var(--color-white);
+  width: 50px;
+  height: 50px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  margin-left: -25px;
+  opacity: 1;
+}
+
+.cr-next-btn {
+  margin-right: -25px;
+}
+
+.cr-prev-btn-icon,
+.cr-next-btn-icon {
+  color: black;
+  font-size: 20px;
+}
+
 .pt-img,
-.cr-pt-img {
+.cr-pt-img-1,
+.cr-pt-img-2,
+.cr-pt-img-3,
+.cr-pt-img-4 {
   width: 85%;
   border: 1px solid transparent;
   border-radius: 20px;
@@ -252,12 +296,19 @@ body {
   justify-content: space-around;
 }
 
-.pt-thumbnails div,
-.cr-pt-thumbnails div {
+.pt-thumbnails div {
   border: 2px solid transparent;
   border-radius: 8px;
   margin: 0 10px;
   overflow: hidden;
+}
+
+.cr-pt-thumbnails div {
+  border: 2px solid var(--color-black-1);
+  border-radius: 8px;
+  margin: 0 10px;
+  overflow: hidden;
+  background-color: white;
 }
 
 img[alt="pt-thumbnail"] {
@@ -277,11 +328,11 @@ img[alt="pt-thumbnail"] {
 }
 
 .th-div-active {
+  border: 2px solid var(--p-color-1) !important;
   cursor: pointer;
-  border-color: var(--p-color-1) !important;
 }
 
-/* hero-styles-col-right-desktop */
+/* product info styles */
 
 .pt-info {
   width: 85%;
@@ -336,9 +387,12 @@ img[alt="pt-thumbnail"] {
   text-decoration: line-through;
 }
 
+/* product action styles */
+
 .pt-action {
   padding-top: 20px;
   display: flex;
+  align-items: center;
 }
 
 .pt-count-btn {
@@ -382,22 +436,27 @@ img[alt="pt-thumbnail"] {
   );
 }
 
-.pt-add-btn {
+.pt-atc-btn {
+  width: 100%;
+}
+
+.atc-btn {
   background-color: var(--p-color-1);
+  padding: 14px 0px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.cab-txt {
+.atc-txt {
   margin-bottom: 0;
   margin-left: 20px;
   font-weight: 800;
   color: var(--color-white);
 }
 
-.pt-add-btn:hover {
+.atc-btn:hover {
   mask-image: linear-gradient(
     rgba(255, 255, 255, 0.5),
     rgba(255, 255, 255, 0.5)
@@ -415,4 +474,25 @@ img[alt="pt-thumbnail"] {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* sm-styles (tablets and mobiles) */
+
+@media screen and (max-width: 992px) {
+  .ct-nav-brand {
+    padding-left: 20px;
+  }
+
+  .ct-nav-visible {
+    width: 100%;
+  }
+
+  .ca-tooltip {
+    top: 19px;
+    right: 84px;
+  }
+
+  .cart-active {
+    left: 60%;
+  }
 }
