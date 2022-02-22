@@ -37,9 +37,21 @@ body {
   padding: 0% 7%;
 }
 
+.sm-navbar {
+  display: none;
+}
+
 .ct-nav-1 {
   background-color: var(--color-white) !important;
   padding: 0;
+}
+
+.ct-nav-toggler {
+  border: none;
+}
+
+.ct-nav-toggler:focus {
+  box-shadow: none;
 }
 
 .ct-nav-brand {
@@ -100,7 +112,7 @@ li[class*=" ct-nav-12-"]:hover {
   width: 350px;
   min-height: 250px;
   top: 85%;
-  left: 74%;
+  left: 68%;
 }
 
 .cart-active > h6 {
@@ -483,6 +495,10 @@ img[alt="pt-thumbnail"] {
     padding-left: 20px;
   }
 
+  .ct-nav-1-2 {
+    order: 3;
+  }
+
   .ct-nav-visible {
     width: 100%;
   }
@@ -493,6 +509,59 @@ img[alt="pt-thumbnail"] {
   }
 
   .cart-active {
-    left: 60%;
+    left: 52%;
+    top: 62px;
+  }
+}
+
+@media screen and (max-width: 762px) {
+  .ct-nav-1-2 {
+    display: none;
+  }
+
+  .sm-navbar {
+    position: absolute;
+    z-index: 10;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: var(--color-black-2);
+  }
+
+  .sm-nav-inner {
+    height: 100%;
+    background-color: var(--color-white);
+    width: 70%;
+    padding: 23px 0 0 25px;
+  }
+
+  .sm-nav-cancel-btn {
+    color: var(--color-black-1);
+    font-size: 1.6rem;
+  }
+
+  .sm-nav-items {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 25px;
+  }
+
+  .sm-nav-item {
+    padding: 10px 0;
+  }
+
+  .sm-nav-link {
+    text-decoration: none;
+    font-weight: 800;
+    color: black;
+    font-size: 1.5rem;
+  }
+
+  .sm-nav-link:focus {
+    color: black;
+  }
+
+  .nav-hr {
+    display: none;
   }
 }
