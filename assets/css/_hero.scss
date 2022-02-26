@@ -1,0 +1,226 @@
+section#hero {
+  padding: 8% 8%;
+
+  div.hero-images {
+    div.pt-display-img {
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+
+      img {
+        @include carousel-image;
+      }
+
+      div.pt-carousel-outer {
+        display: none;
+        position: absolute;
+        z-index: 3;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        background-color: $color-black-1;
+
+        div.pt-carousel-inner {
+          position: relative;
+          width: 40%;
+          left: 30%;
+          top: 130px;
+
+          div.cr-cancel-btn {
+            display: flex;
+            justify-content: flex-end;
+            cursor: pointer;
+
+            span {
+              font-size: 24px;
+              color: white;
+
+              :hover {
+                color: $primary-color-1;
+              }
+            }
+          }
+
+          div.carousel {
+            img {
+              @include carousel-image;
+            }
+
+            button {
+              width: fit-content;
+              height: fit-content;
+              margin: auto;
+              background-color: var(--color-white);
+              width: 50px;
+              height: 50px;
+              border: 1px solid transparent;
+              border-radius: 50%;
+              margin-left: -25px;
+              opacity: 1;
+
+              span:first-child {
+                color: black;
+                font-size: 20px;
+              }
+            }
+
+            button.cr-next-btn {
+              margin-right: -25px;
+            }
+          }
+
+          div.cr-pt-thumbnails {
+            @include thumbnail-container;
+
+            div {
+              @include thumbnail-divs;
+              border: 2px solid $color-black-1;
+              background-color: white;
+
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    div.pt-thumbnails {
+      @include thumbnail-container;
+
+      div {
+        @include thumbnail-divs;
+        border: 2px solid transparent;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  div.hero-infos {
+    div.pt-info {
+      width: 85%;
+      margin: auto;
+
+      h6.pt-company {
+        margin-top: 70px;
+        font-weight: 800;
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: var(--p-color-1);
+      }
+
+      h2.pt-title {
+        padding-top: 10px;
+        font-weight: 800;
+        font-size: 2.8rem;
+      }
+
+      p.pt-description {
+        color: $color-black-1;
+        padding-top: 30px;
+      }
+
+      div.pt-price {
+        display: flex;
+        align-items: center;
+        letter-spacing: 1px;
+        padding-top: 20px;
+
+        h5 {
+          font-weight: 800;
+          font-size: 2rem;
+        }
+
+        h6 {
+          margin-left: 20px;
+          background-color: var(--p-color-2);
+          color: var(--p-color-1);
+          font-weight: 800;
+          padding: 5px 8px;
+          border: 1px solid var(--color-white);
+          border-radius: 8px;
+        }
+      }
+
+      h5.pt-original-price {
+        color: $color-greyishblue;
+        font-weight: 800;
+        font-size: 1rem;
+        text-decoration: line-through;
+      }
+
+      div.pt-action {
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+
+        div.pa-count-btn {
+          display: flex;
+          background-color: $color-lightgreyishblue;
+          border-left: 1px solid white;
+          border-radius: 8px;
+          margin-right: 20px;
+
+          p {
+            padding: 15px 25px;
+            font-weight: 800;
+            margin: 0;
+          }
+
+          .pt-count-add,
+          .pt-count-sub {
+            cursor: pointer;
+
+            :hover {
+              mask-image: linear-gradient(
+                rgba(255, 255, 255, 0.5),
+                rgba(255, 255, 255, 0.5)
+              );
+              -webkit-mask-image: linear-gradient(
+                rgba(255, 255, 255, 0.5),
+                rgba(255, 255, 255, 0.5)
+              );
+            }
+          }
+        }
+
+        div.pt-atc-btn {
+          width: 100%;
+
+          button {
+            background-color: $primary-color-1;
+            padding: 14px 0px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+              margin-bottom: 0;
+              margin-left: 20px;
+              font-weight: 800;
+              color: white;
+            }
+
+            :hover {
+              mask-image: linear-gradient(
+                rgba(255, 255, 255, 0.5),
+                rgba(255, 255, 255, 0.5)
+              );
+              -webkit-mask-image: linear-gradient(
+                rgba(255, 255, 255, 0.5),
+                rgba(255, 255, 255, 0.5)
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+}

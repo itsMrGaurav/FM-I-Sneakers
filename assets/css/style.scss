@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;800&display=swap");
+
+// universals
+@import "vars";
+@import "mixins";
+@import "global";
+
+// layouts
+@import "nav";
+@import "hero";
+@import "footer";
+@import "media";

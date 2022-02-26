@@ -1,0 +1,19 @@
+@mixin thumbnail-container {
+  margin: auto;
+  width: 88%;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+
+@mixin thumbnail-divs {
+  border-radius: 8px;
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+@mixin carousel-image {
+  width: 85%;
+  border: 1px solid transparent;
+  border-radius: 20px;
+}

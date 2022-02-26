@@ -1,0 +1,624 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;800&display=swap");
+hr {
+  margin: 0;
+  margin: auto;
+  color: var(--color-black-1);
+}
+
+.th-img-active {
+  mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3)));
+  mask-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3)));
+  -webkit-mask-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+  cursor: pointer;
+}
+
+.th-div-active {
+  border: 2px solid var(--p-color-1) !important;
+  cursor: pointer;
+}
+
+section#navbar {
+  padding: 0% 7%;
+}
+
+section#navbar nav {
+  background-color: white !important;
+  padding: 0;
+}
+
+section#navbar nav .nav-div-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#navbar nav .nav-div-1 a.nav-brand {
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 8px;
+  margin-right: 40px;
+}
+
+section#navbar nav .nav-div-2 li {
+  padding: 25px 0;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+section#navbar nav .nav-div-2 li:hover {
+  border-color: #ff7d1a;
+}
+
+section#navbar nav .nav-div-3 {
+  display: none;
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+}
+
+section#navbar nav .nav-div-4 ul {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 30px;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-cart .ca-tooltip {
+  display: none;
+  position: absolute;
+  top: 32px;
+  right: 106px;
+  background-color: #ff7d1a;
+  color: white;
+  border: 1px solid #ff7d1a;
+  border-radius: 40%;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-cart .ca-tooltip h6 {
+  text-align: center;
+  font-size: 10px;
+  padding: 0 7px;
+  font-weight: 800;
+  margin: 0;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-cart .cart-active {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 30px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 30px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  width: 350px;
+  min-height: 250px;
+  top: 85%;
+  left: 68%;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-cart .cart-active h6 {
+  padding: 20px 0 20px 20px;
+  font-weight: 800;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-cart .cart-active hr {
+  width: 100%;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-empty {
+  color: #b6bcc8;
+  text-align: center;
+  font-weight: 800;
+  padding-top: 70px;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents {
+  display: none;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-content:hover {
+  cursor: pointer;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-content img {
+  width: 18%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 8px;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-content .ca-content-info {
+  color: rgba(0, 0, 0, 0.55);
+  padding: 0 10px;
+  height: inherit;
+  margin: auto;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-content .ca-content-info h4 {
+  font-size: 1rem;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-content .ca-content-info span.ca-pt-price {
+  font-weight: 800;
+  color: black;
+  padding-left: 10px;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-content svg {
+  height: inherit;
+  margin: auto;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-checkout {
+  margin: 10px 18px;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-checkout button {
+  background-color: #ff7d1a;
+  width: 100%;
+  font-weight: 800;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-checkout button:hover {
+  mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5)));
+  mask-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5)));
+  -webkit-mask-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  color: white;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-cart a.nav-link {
+  padding: 20px 0;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-avatar a .avatar-img {
+  width: 50px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+section#navbar nav .nav-div-4 ul li.nav-avatar a .avatar-img:hover {
+  border: 2px solid #ff7d1a;
+  border-radius: 50%;
+}
+
+hr.nav-hr {
+  width: 86%;
+}
+
+section#hero {
+  padding: 8% 8%;
+}
+
+section#hero div.hero-images div.pt-display-img {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+section#hero div.hero-images div.pt-display-img img {
+  width: 85%;
+  border: 1px solid transparent;
+  border-radius: 20px;
+}
+
+section#hero div.hero-images div.pt-display-img div.pt-carousel-outer {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner {
+  position: relative;
+  width: 40%;
+  left: 30%;
+  top: 130px;
+}
+
+section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.cr-cancel-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  cursor: pointer;
+}
+
+section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.cr-cancel-btn span {
+  font-size: 24px;
+  color: white;
+}
+
+section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.cr-cancel-btn span :hover {
+  color: #ff7d1a;
+}
+
+section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.carousel img {
+  width: 85%;
+  border: 1px solid transparent;
+  border-radius: 20px;
+}
+
+section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.carousel button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+  background-color: var(--color-white);
+  width: 50px;
+  height: 50px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  margin-left: -25px;
+  opacity: 1;
+}
+
+section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.carousel button span:first-child {
+  color: black;
+  font-size: 20px;
+}
+
+section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.carousel button.cr-next-btn {
+  margin-right: -25px;
+}
+
+section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.cr-pt-thumbnails {
+  margin: auto;
+  width: 88%;
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.cr-pt-thumbnails div {
+  border-radius: 8px;
+  margin: 0 10px;
+  overflow: hidden;
+  border: 2px solid rgba(0, 0, 0, 0.55);
+  background-color: white;
+}
+
+section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.cr-pt-thumbnails div img {
+  width: 100%;
+}
+
+section#hero div.hero-images div.pt-thumbnails {
+  margin: auto;
+  width: 88%;
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+section#hero div.hero-images div.pt-thumbnails div {
+  border-radius: 8px;
+  margin: 0 10px;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+section#hero div.hero-images div.pt-thumbnails div img {
+  width: 100%;
+}
+
+section#hero div.hero-infos div.pt-info {
+  width: 85%;
+  margin: auto;
+}
+
+section#hero div.hero-infos div.pt-info h6.pt-company {
+  margin-top: 70px;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: var(--p-color-1);
+}
+
+section#hero div.hero-infos div.pt-info h2.pt-title {
+  padding-top: 10px;
+  font-weight: 800;
+  font-size: 2.8rem;
+}
+
+section#hero div.hero-infos div.pt-info p.pt-description {
+  color: rgba(0, 0, 0, 0.55);
+  padding-top: 30px;
+}
+
+section#hero div.hero-infos div.pt-info div.pt-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 1px;
+  padding-top: 20px;
+}
+
+section#hero div.hero-infos div.pt-info div.pt-price h5 {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+section#hero div.hero-infos div.pt-info div.pt-price h6 {
+  margin-left: 20px;
+  background-color: var(--p-color-2);
+  color: var(--p-color-1);
+  font-weight: 800;
+  padding: 5px 8px;
+  border: 1px solid var(--color-white);
+  border-radius: 8px;
+}
+
+section#hero div.hero-infos div.pt-info h5.pt-original-price {
+  color: #b6bcc8;
+  font-weight: 800;
+  font-size: 1rem;
+  text-decoration: line-through;
+}
+
+section#hero div.hero-infos div.pt-info div.pt-action {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f7f8fd;
+  border-left: 1px solid white;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn p {
+  padding: 15px 25px;
+  font-weight: 800;
+  margin: 0;
+}
+
+section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn .pt-count-add,
+section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn .pt-count-sub {
+  cursor: pointer;
+}
+
+section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn .pt-count-add :hover,
+section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn .pt-count-sub :hover {
+  mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5)));
+  mask-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5)));
+  -webkit-mask-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+}
+
+section#hero div.hero-infos div.pt-info div.pt-action div.pt-atc-btn {
+  width: 100%;
+}
+
+section#hero div.hero-infos div.pt-info div.pt-action div.pt-atc-btn button {
+  background-color: #ff7d1a;
+  padding: 14px 0px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#hero div.hero-infos div.pt-info div.pt-action div.pt-atc-btn button p {
+  margin-bottom: 0;
+  margin-left: 20px;
+  font-weight: 800;
+  color: white;
+}
+
+section#hero div.hero-infos div.pt-info div.pt-action div.pt-atc-btn button :hover {
+  mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5)));
+  mask-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5)));
+  -webkit-mask-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+}
+
+section#footer div {
+  font-size: 11px;
+  text-align: center;
+}
+
+section#footer div a {
+  color: #3e52a3;
+}
+
+@media screen and (max-width: 992px) {
+  section#navbar nav .nav-div-1 div.nav-toggler-icon {
+    position: relative;
+    border: none;
+    cursor: pointer;
+    padding-top: 8px;
+  }
+  section#navbar nav .nav-div-1 div.nav-toggler-icon input {
+    display: none;
+  }
+  section#navbar nav .nav-div-1 div.nav-toggler-icon span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 27px;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.55);
+    margin-bottom: 4px;
+  }
+  section#navbar nav .nav-div-1 a.nav-brand {
+    padding-left: 20px;
+    margin-bottom: 4px;
+  }
+  section#navbar nav .nav-div-4 ul li.nav-cart div.cart-active {
+    left: 54%;
+  }
+  section#navbar nav .nav-div-2 {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  section#navbar nav .ca-tooltip {
+    top: 19px;
+    right: 84px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section#navbar nav .nav-div-4 ul li.nav-cart div.cart-active {
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section#navbar nav {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  section#navbar nav .nav-div-1 div input {
+    width: 30px;
+    height: 22px;
+    position: absolute;
+    top: 3px;
+    left: 7px;
+    z-index: 6;
+    opacity: 0;
+    cursor: pointer;
+  }
+  section#navbar nav .nav-div-1 div input :checked ~ span :nth-child(2) {
+    -webkit-transform: rotate(-45deg) translate(4px, -1px);
+            transform: rotate(-45deg) translate(4px, -1px);
+  }
+  section#navbar nav .nav-div-1 div input :checked ~ span :nth-child(4) {
+    -webkit-transform: rotate(-45deg) translate(-1px, 2px);
+            transform: rotate(-45deg) translate(-1px, 2px);
+  }
+  section#navbar nav .nav-div-1 div input :checked ~ span :nth-child(3) {
+    opacity: 0;
+  }
+  section#navbar nav .nav-div-1 div span {
+    -webkit-transform-origin: 5px 0px;
+            transform-origin: 5px 0px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#navbar nav .nav-div-1 div :last-child {
+    margin-bottom: 0;
+  }
+  section#navbar nav .nav-div-2 {
+    display: none;
+  }
+  section#navbar nav .nav-div-3 {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  section#navbar nav .nav-div-3 div {
+    height: 100%;
+    background-color: var(--color-white);
+    width: 70%;
+    padding: 23px 0 0 25px;
+  }
+  section#navbar nav .nav-div-3 div ul {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 25px;
+  }
+  section#navbar nav .nav-div-3 div ul li {
+    padding: 10px 0;
+  }
+  section#navbar nav .nav-div-3 div ul li a {
+    text-decoration: none;
+    font-weight: 800;
+    color: black;
+    font-size: 1.5rem;
+  }
+  section#navbar nav .nav-div-3 div ul li a :focus {
+    color: black;
+  }
+}
+
+section#navbar .nav-brand {
+  padding-left: 10px;
+}
+
+section#navbar .avatar-img {
+  width: 35px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-hr {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

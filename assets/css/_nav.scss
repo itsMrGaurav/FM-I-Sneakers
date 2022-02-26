@@ -1,0 +1,196 @@
+section#navbar {
+  padding: 0% 7%;
+
+  nav {
+    background-color: white !important;
+    padding: 0;
+
+    .nav-div-1 {
+      display: flex;
+      align-items: center;
+
+      a.nav-brand {
+        font-weight: 800;
+        font-size: 2rem;
+        margin-bottom: 8px;
+        margin-right: 40px;
+      }
+    }
+
+    .nav-div-2 {
+      li {
+        padding: 25px 0;
+        border-bottom: 3px solid transparent;
+        transition: all 0.15s ease-in-out;
+
+        &:hover {
+          border-color: $primary-color-1;
+        }
+      }
+    }
+
+    .nav-div-3 {
+      display: none;
+      position: absolute;
+      z-index: 4;
+      width: 100%;
+      background-color: $color-black-2;
+      transform-origin: 0%;
+    }
+
+    .nav-div-4 {
+      ul {
+        flex-direction: row;
+        align-items: center;
+
+        li.nav-cart {
+          display: flex;
+          align-items: center;
+          margin-right: 30px;
+
+          .ca-tooltip {
+            display: none;
+            position: absolute;
+            top: 32px;
+            right: 106px;
+            background-color: $primary-color-1;
+            color: white;
+            border: 1px solid $primary-color-1;
+            border-radius: 40%;
+
+            h6 {
+              text-align: center;
+              font-size: 10px;
+              padding: 0 7px;
+              font-weight: 800;
+              margin: 0;
+            }
+          }
+
+          .cart-active {
+            display: none;
+            position: absolute;
+            z-index: 2;
+            background-color: white;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 30px -5px,
+              rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            width: 350px;
+            min-height: 250px;
+            top: 85%;
+            left: 68%;
+
+            h6 {
+              padding: 20px 0 20px 20px;
+              font-weight: 800;
+            }
+
+            hr {
+              width: 100%;
+            }
+
+            .ca-empty {
+              color: $color-greyishblue;
+              text-align: center;
+              font-weight: 800;
+              padding-top: 70px;
+            }
+
+            .ca-contents {
+              display: none;
+
+              .ca-content {
+                display: flex;
+                padding: 15px 10px;
+                justify-content: center;
+
+                &:hover {
+                  cursor: pointer;
+                }
+
+                img {
+                  width: 18%;
+                  height: 100%;
+                  border: 2px solid transparent;
+                  border-radius: 8px;
+                }
+
+                .ca-content-info {
+                  color: $color-black-1;
+                  padding: 0 10px;
+                  height: inherit;
+                  margin: auto;
+
+                  h4 {
+                    font-size: 1rem;
+                  }
+
+                  span.ca-pt-price {
+                    font-weight: 800;
+                    color: black;
+                    padding-left: 10px;
+                  }
+                }
+
+                svg {
+                  height: inherit;
+                  margin: auto;
+                }
+              }
+
+              .ca-checkout {
+                margin: 10px 18px;
+
+                button {
+                  background-color: $primary-color-1;
+                  width: 100%;
+                  font-weight: 800;
+                  color: white;
+                  padding: 15px;
+                  border-radius: 8px;
+
+                  &:hover {
+                    mask-image: linear-gradient(
+                      rgba(255, 255, 255, 0.5),
+                      rgba(255, 255, 255, 0.5)
+                    );
+                    -webkit-mask-image: linear-gradient(
+                      rgba(255, 255, 255, 0.5),
+                      rgba(255, 255, 255, 0.5)
+                    );
+                    color: white;
+                  }
+                }
+              }
+            }
+          }
+
+          a.nav-link {
+            padding: 20px 0;
+          }
+        }
+
+        li.nav-avatar {
+          a {
+            .avatar-img {
+              width: 50px;
+              border: 2px solid transparent;
+              border-radius: 50%;
+              transition: all 0.15s ease-in-out;
+
+              &:hover {
+                border: 2px solid $primary-color-1;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+hr.nav-hr {
+  width: 86%;
+}

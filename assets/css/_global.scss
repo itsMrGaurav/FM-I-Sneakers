@@ -1,0 +1,22 @@
+hr {
+  margin: 0;
+  margin: auto;
+  color: var(--color-black-1);
+}
+
+.th-img-active {
+  mask-image: linear-gradient(
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.3)
+  );
+  -webkit-mask-image: linear-gradient(
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.3)
+  );
+  cursor: pointer;
+}
+
+.th-div-active {
+  border: 2px solid var(--p-color-1) !important;
+  cursor: pointer;
+}

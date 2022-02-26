@@ -14,7 +14,7 @@
 
 
   <!-- custom-styles -->
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- font-awesome -->
   <script src="https://kit.fontawesome.com/4cc93ec48c.js" crossorigin="anonymous"></script>
@@ -22,41 +22,43 @@
 </head>
 <body>
 
-  <section id="navbar" class="ct-navbar">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ct-nav-1">
+  <section id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
       <div class="container-fluid">
 
-        <div class="ct-nav-1-1">
-          <button class="navbar-toggler ct-nav-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <div class="nav-div-1">
+          <div class="navbar-toggler nav-toggler-icon" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars"></i>
-          </button>
-          <a class="navbar-brand ct-nav-brand" href="#">sneakers</a>
+            <input type="checkbox" id="toggleCheckbox">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>          
+          <a class="navbar-brand nav-brand" href="#">sneakers</a>
         </div>
         
-        <div class="collapse navbar-collapse ct-nav-1-2" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse nav-div-2" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item ct-nav-12-1">
+            <li class="nav-item">
               <a class="nav-link" href="#">Collections</a>
             </li>
-            <li class="nav-item ct-nav-12-2">
+            <li class="nav-item">
               <a class="nav-link" href="#">Men</a>
             </li>
-            <li class="nav-item ct-nav-12-3">
+            <li class="nav-item">
               <a class="nav-link" href="#">Women</a>
             </li>
-            <li class="nav-item ct-nav-12-4">
+            <li class="nav-item">
               <a class="nav-link" href="#">About</a>
             </li>
-            <li class="nav-item ct-nav-12-5">
+            <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
             </li>
           </ul>
         </div>
 
-        <div class="sm-navbar">
-          <div class="sm-nav-inner">
-            <div class="sm-nav-cancel-btn"><i class="fa-solid fa-xmark"></i></div>
+        <div class="nav-div-3">
+          <div>
             <ul class="sm-nav-items">
               <li class="sm-nav-item">
                 <a class="sm-nav-link" href="#">Collections</a>
@@ -75,14 +77,14 @@
               </li>
             </ul>
           </div>
-          </div>
+        </div>
 
-        <div class="ct-nav-1-3">
+        <div class="nav-div-4">
           <ul class="navbar-nav ms-auto ct-nav-items">
             
             <!-- navbar-cart -->
   
-            <li class="nav-item ct-nav-item-cart">
+            <li class="nav-item nav-cart">
               <div class="ca-tooltip">
                 <h6 class="ca-item-count">0</h6>
               </div>            
@@ -131,7 +133,7 @@
             </li>
   
             <!-- navbar-avatar -->
-            <li class="nav-item">
+            <li class="nav-item nav-avatar">
               <a href="#" class="nav-link">
                 <img src="assets/images/image-avatar.png" alt="image-avatar" class="avatar-img">
               </a>
@@ -143,19 +145,20 @@
       </div>
     </nav>
   </section>
-  <hr class="ct-hr nav-hr">
 
-  <section id="hero" class="row ct-container-hero">
+  <hr class="nav-hr">
+
+  <section id="hero" class="row">
 
     <!-- hero-section product images, thumbnails and carousels -->
-    <div class="col-lg-6">
+    <div class="col-lg-6 hero-images">
       <div class="pt-display-img">
         <img src="assets/images/image-product-1.jpg" class="pt-img" alt="product-img">
 
         <!-- product carousels  -->
         <div class="pt-carousel-outer">          
           <div class="pt-carousel-inner">
-            <div class="carousel-cancel-btn">
+            <div class="cr-cancel-btn">
               <span class="cr-cancel-btn-icon"><i class="fa-solid fa-xmark"></i></span>
             </div>
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false">
@@ -217,25 +220,29 @@
 
 
     <!-- hero section product info section -->
-    <div class="col-lg-6">
+    <div class="col-lg-6 hero-infos">
       <div class="pt-info">
         <h6 class="pt-company">SNEAKER COMPANY</h6>
         <h2 class="pt-title">Fall Limited Edition Sneakers</h2>
         <p class="pt-description">These low-profile sneakers are your perfect casual wear companion. Featuring a
         durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        
         <div class="pt-price">
           <h5 class="pt-discount-price">$125.00</h5>
           <h6 class="pt-discount">50%</h6>
         </div>
+
         <h5 class="pt-original-price">$250.00</h5>
 
         <!-- product action section -->
         <div class="pt-action">
-          <div class="pt-count-btn">
-            <p class="pt-count-sub"><img src="assets/images/icon-minus.svg" alt="icon-minus"></p>
-            <p class="pt-count-value">1</p>
-            <p class="pt-count-add"><img src="assets/images/icon-plus.svg" alt="icon-plus"></p>
+          
+          <div class="pa-count-btn">
+            <p class="pa-count-sub"><img src="assets/images/icon-minus.svg" alt="icon-minus"></p>
+            <p class="pa-count-value">1</p>
+            <p class="pa-count-add"><img src="assets/images/icon-plus.svg" alt="icon-plus"></p>
           </div>
+
           <div class="pt-atc-btn">
             <button class="btn atc-btn">
               <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -246,16 +253,19 @@
               <p class="atc-txt">Add to cart</p>
             </button>
           </div>
+
         </div>
 
       </div>
     </div>
   </section>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/itsKiranay">Gaurav Kumar</a>.
-  </div>
+  <section id="footer">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/itsKiranay">Gaurav Kumar</a>.
+    </div>
+  </section>
 
   <!-- bootstrap-js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -266,6 +276,6 @@
       crossorigin="anonymous"></script>
 
     <!-- my-script -->
-    <script src="index.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>
