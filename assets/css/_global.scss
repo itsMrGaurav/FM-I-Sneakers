@@ -1,3 +1,7 @@
+html {
+  min-width: 324px;
+}
+
 hr {
   margin: 0;
   margin: auto;
@@ -17,6 +21,6 @@ hr {
 }
 
 .th-div-active {
-  border: 2px solid var(--p-color-1) !important;
+  border: 2px solid $primary-color-1 !important;
   cursor: pointer;
 }

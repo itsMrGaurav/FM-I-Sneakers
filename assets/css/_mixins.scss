@@ -1,19 +1,42 @@
 @mixin thumbnail-container {
   margin: auto;
-  width: 88%;
+  width: 90%;
   padding-top: 40px;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 25px;
 }
 
 @mixin thumbnail-divs {
   border-radius: 8px;
-  margin: 0 10px;
   overflow: hidden;
 }
 
 @mixin carousel-image {
-  width: 85%;
+  width: 90%;
   border: 1px solid transparent;
   border-radius: 20px;
+}
+
+@mixin direction-btns {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+@mixin btn_mask {
+  mask-image: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)
+  );
+  -webkit-mask-image: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)
+  );
 }

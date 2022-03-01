@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;800&display=swap");
+html {
+  min-width: 324px;
+}
+
 hr {
   margin: 0;
   margin: auto;
@@ -14,7 +18,7 @@ hr {
 }
 
 .th-div-active {
-  border: 2px solid var(--p-color-1) !important;
+  border: 2px solid #ff7d1a !important;
   cursor: pointer;
 }
 
@@ -36,6 +40,11 @@ section#navbar nav .nav-div-1 {
           align-items: center;
 }
 
+section#navbar nav .nav-div-1 div#sm-navbar {
+  width: 0%;
+  display: none;
+}
+
 section#navbar nav .nav-div-1 a.nav-brand {
   font-weight: 800;
   font-size: 2rem;
@@ -54,17 +63,7 @@ section#navbar nav .nav-div-2 li:hover {
   border-color: #ff7d1a;
 }
 
-section#navbar nav .nav-div-3 {
-  display: none;
-  position: absolute;
-  z-index: 4;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
-  -webkit-transform-origin: 0%;
-          transform-origin: 0%;
-}
-
-section#navbar nav .nav-div-4 ul {
+section#navbar nav .nav-div-3 ul {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -74,7 +73,7 @@ section#navbar nav .nav-div-4 ul {
           align-items: center;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-cart {
+section#navbar nav .nav-div-3 ul li.nav-cart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,18 +83,18 @@ section#navbar nav .nav-div-4 ul li.nav-cart {
   margin-right: 30px;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-cart .ca-tooltip {
+section#navbar nav .nav-div-3 ul li.nav-cart .ca-tooltip {
   display: none;
   position: absolute;
   top: 32px;
-  right: 106px;
+  right: 100px;
   background-color: #ff7d1a;
   color: white;
   border: 1px solid #ff7d1a;
   border-radius: 40%;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-cart .ca-tooltip h6 {
+section#navbar nav .nav-div-3 ul li.nav-cart .ca-tooltip h6 {
   text-align: center;
   font-size: 10px;
   padding: 0 7px;
@@ -103,89 +102,99 @@ section#navbar nav .nav-div-4 ul li.nav-cart .ca-tooltip h6 {
   margin: 0;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-cart .cart-active {
+section#navbar nav .nav-div-3 ul li.nav-cart .cart-active {
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 2;
   background-color: white;
   border: 1px solid transparent;
   border-radius: 8px;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 30px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 30px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  width: 350px;
+  min-width: 300px;
+  max-width: 350px;
   min-height: 250px;
-  top: 85%;
-  left: 68%;
+  top: 12%;
+  right: 8%;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-cart .cart-active h6 {
+section#navbar nav .nav-div-3 ul li.nav-cart .cart-active h6.ca-title {
   padding: 20px 0 20px 20px;
   font-weight: 800;
+  margin-bottom: 0;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-cart .cart-active hr {
+section#navbar nav .nav-div-3 ul li.nav-cart .cart-active hr {
   width: 100%;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-empty {
+section#navbar nav .nav-div-3 ul li.nav-cart .cart-active .ca-empty {
   color: #b6bcc8;
   text-align: center;
   font-weight: 800;
   padding-top: 70px;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents {
+section#navbar nav .nav-div-3 ul li.nav-cart .cart-active .ca-contents {
   display: none;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 15px 10px;
+section#navbar nav .nav-div-3 ul li.nav-cart .cart-active .ca-contents .ca-content {
+  display: -ms-grid;
+  display: grid;
+  padding: 15px 12px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-content:hover {
+section#navbar nav .nav-div-3 ul li.nav-cart .cart-active .ca-contents .ca-content:hover {
   cursor: pointer;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-content img {
-  width: 18%;
-  height: 100%;
+section#navbar nav .nav-div-3 ul li.nav-cart .cart-active .ca-contents .ca-content img.ca-content-img {
+  width: 58px;
   border: 2px solid transparent;
   border-radius: 8px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-content .ca-content-info {
+section#navbar nav .nav-div-3 ul li.nav-cart .cart-active .ca-contents .ca-content .ca-content-info {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-column: 3/6;
   color: rgba(0, 0, 0, 0.55);
-  padding: 0 10px;
+  padding: 0 30px 0 10px;
   height: inherit;
   margin: auto;
+  font-size: 16px;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-content .ca-content-info h4 {
-  font-size: 1rem;
+section#navbar nav .nav-div-3 ul li.nav-cart .cart-active .ca-contents .ca-content .ca-content-info h4 {
+  font-weight: 400;
+  font-size: 16px;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-content .ca-content-info span.ca-pt-price {
+section#navbar nav .nav-div-3 ul li.nav-cart .cart-active .ca-contents .ca-content .ca-content-info span.ca-pt-tprice {
   font-weight: 800;
   color: black;
-  padding-left: 10px;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-content svg {
+section#navbar nav .nav-div-3 ul li.nav-cart .cart-active .ca-contents .ca-content div.ca-del-icon {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-column: 6/7;
   height: inherit;
   margin: auto;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-checkout {
-  margin: 10px 18px;
+section#navbar nav .nav-div-3 ul li.nav-cart .cart-active .ca-contents .ca-checkout {
+  padding: 10px 15px;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-checkout button {
+section#navbar nav .nav-div-3 ul li.nav-cart .cart-active .ca-contents .ca-checkout button {
   background-color: #ff7d1a;
   width: 100%;
   font-weight: 800;
@@ -194,7 +203,7 @@ section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-check
   border-radius: 8px;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-checkout button:hover {
+section#navbar nav .nav-div-3 ul li.nav-cart .cart-active .ca-contents .ca-checkout button:hover {
   mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5)));
   mask-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5)));
@@ -202,11 +211,12 @@ section#navbar nav .nav-div-4 ul li.nav-cart .cart-active .ca-contents .ca-check
   color: white;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-cart a.nav-link {
-  padding: 20px 0;
+section#navbar nav .nav-div-3 ul li.nav-cart a.nav-link {
+  margin: 20px 0;
+  padding: 0;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-avatar a .avatar-img {
+section#navbar nav .nav-div-3 ul li.nav-avatar a .avatar-img {
   width: 50px;
   border: 2px solid transparent;
   border-radius: 50%;
@@ -214,7 +224,7 @@ section#navbar nav .nav-div-4 ul li.nav-avatar a .avatar-img {
   transition: all 0.15s ease-in-out;
 }
 
-section#navbar nav .nav-div-4 ul li.nav-avatar a .avatar-img:hover {
+section#navbar nav .nav-div-3 ul li.nav-avatar a .avatar-img:hover {
   border: 2px solid #ff7d1a;
   border-radius: 50%;
 }
@@ -227,8 +237,19 @@ section#hero {
   padding: 8% 8%;
 }
 
+section#hero div.hero-images {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 45%;
+}
+
 section#hero div.hero-images div.pt-display-img {
-  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,8 +259,8 @@ section#hero div.hero-images div.pt-display-img {
   cursor: pointer;
 }
 
-section#hero div.hero-images div.pt-display-img img {
-  width: 85%;
+section#hero div.hero-images div.pt-display-img img.pt-img {
+  width: 90%;
   border: 1px solid transparent;
   border-radius: 20px;
 }
@@ -282,7 +303,7 @@ section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-car
 }
 
 section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.carousel img {
-  width: 85%;
+  width: 90%;
   border: 1px solid transparent;
   border-radius: 20px;
 }
@@ -295,13 +316,13 @@ section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-car
   height: -moz-fit-content;
   height: fit-content;
   margin: auto;
-  background-color: var(--color-white);
+  background-color: white;
   width: 50px;
   height: 50px;
   border: 1px solid transparent;
   border-radius: 50%;
-  margin-left: -25px;
   opacity: 1;
+  margin-left: -25px;
 }
 
 section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.carousel button span:first-child {
@@ -313,49 +334,54 @@ section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-car
   margin-right: -25px;
 }
 
-section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.cr-pt-thumbnails {
+section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.cr-thumbnails {
   margin: auto;
-  width: 88%;
+  width: 90%;
   padding-top: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  -webkit-column-gap: 25px;
+          column-gap: 25px;
 }
 
-section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.cr-pt-thumbnails div {
+section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.cr-thumbnails div.cr-th-div {
   border-radius: 8px;
-  margin: 0 10px;
   overflow: hidden;
   border: 2px solid rgba(0, 0, 0, 0.55);
   background-color: white;
 }
 
-section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.cr-pt-thumbnails div img {
+section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.cr-thumbnails div.cr-th-div img.cr-th-img {
   width: 100%;
 }
 
-section#hero div.hero-images div.pt-thumbnails {
+section#hero div.hero-images div.thumbnails {
   margin: auto;
-  width: 88%;
+  width: 90%;
   padding-top: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  -webkit-column-gap: 25px;
+          column-gap: 25px;
 }
 
-section#hero div.hero-images div.pt-thumbnails div {
+section#hero div.hero-images div.thumbnails div.th-div {
   border-radius: 8px;
-  margin: 0 10px;
   overflow: hidden;
   border: 2px solid transparent;
 }
 
-section#hero div.hero-images div.pt-thumbnails div img {
+section#hero div.hero-images div.thumbnails div.th-div img.th-img {
   width: 100%;
+}
+
+section#hero div.hero-infos {
+  display: -ms-grid;
+  display: grid;
 }
 
 section#hero div.hero-infos div.pt-info {
@@ -364,11 +390,11 @@ section#hero div.hero-infos div.pt-info {
 }
 
 section#hero div.hero-infos div.pt-info h6.pt-company {
-  margin-top: 70px;
+  margin-top: 60px;
   font-weight: 800;
   font-size: 14px;
   letter-spacing: 2px;
-  color: var(--p-color-1);
+  color: #ff7d1a;
 }
 
 section#hero div.hero-infos div.pt-info h2.pt-title {
@@ -383,32 +409,40 @@ section#hero div.hero-infos div.pt-info p.pt-description {
 }
 
 section#hero div.hero-infos div.pt-info div.pt-price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  letter-spacing: 1px;
+  padding-top: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  letter-spacing: 1px;
-  padding-top: 20px;
 }
 
-section#hero div.hero-infos div.pt-info div.pt-price h5 {
+section#hero div.hero-infos div.pt-info div.pt-price h5.pt-discount-price {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
   font-weight: 800;
   font-size: 2rem;
 }
 
 section#hero div.hero-infos div.pt-info div.pt-price h6 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 18;
+  grid-column: 2/20;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-left: 20px;
-  background-color: var(--p-color-2);
-  color: var(--p-color-1);
+  background-color: #ffede0;
+  color: #ff7d1a;
   font-weight: 800;
   padding: 5px 8px;
-  border: 1px solid var(--color-white);
+  border: 1px solid white;
   border-radius: 8px;
 }
 
-section#hero div.hero-infos div.pt-info h5.pt-original-price {
+section#hero div.hero-infos div.pt-info div.pt-price h5.pt-original-price {
   color: #b6bcc8;
   font-weight: 800;
   font-size: 1rem;
@@ -417,37 +451,44 @@ section#hero div.hero-infos div.pt-info h5.pt-original-price {
 
 section#hero div.hero-infos div.pt-info div.pt-action {
   padding-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  row-gap: 20px;
 }
 
 section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
   background-color: #f7f8fd;
   border-left: 1px solid white;
   border-radius: 8px;
-  margin-right: 20px;
+  text-align: center;
 }
 
 section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn p {
-  padding: 15px 25px;
+  padding: 15px 0px;
   font-weight: 800;
   margin: 0;
+  width: 100%;
 }
 
-section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn .pt-count-add,
-section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn .pt-count-sub {
+section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn .pa-count-add,
+section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn .pa-count-sub {
   cursor: pointer;
 }
 
-section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn .pt-count-add :hover,
-section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn .pt-count-sub :hover {
+section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn .pa-count-add:hover,
+section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn .pa-count-sub:hover {
   mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5)));
   mask-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5)));
@@ -456,6 +497,9 @@ section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn .pt-count
 
 section#hero div.hero-infos div.pt-info div.pt-action div.pt-atc-btn {
   width: 100%;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-column: 4/7;
 }
 
 section#hero div.hero-infos div.pt-info div.pt-action div.pt-atc-btn button {
@@ -480,7 +524,7 @@ section#hero div.hero-infos div.pt-info div.pt-action div.pt-atc-btn button p {
   color: white;
 }
 
-section#hero div.hero-infos div.pt-info div.pt-action div.pt-atc-btn button :hover {
+section#hero div.hero-infos div.pt-info div.pt-action div.pt-atc-btn button:hover {
   mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5)));
   mask-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5)));
@@ -503,9 +547,6 @@ section#footer div a {
     cursor: pointer;
     padding-top: 8px;
   }
-  section#navbar nav .nav-div-1 div.nav-toggler-icon input {
-    display: none;
-  }
   section#navbar nav .nav-div-1 div.nav-toggler-icon span {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -516,26 +557,26 @@ section#footer div a {
     margin-bottom: 4px;
   }
   section#navbar nav .nav-div-1 a.nav-brand {
-    padding-left: 20px;
-    margin-bottom: 4px;
-  }
-  section#navbar nav .nav-div-4 ul li.nav-cart div.cart-active {
-    left: 54%;
+    padding-left: 0;
+    margin-bottom: 0;
   }
   section#navbar nav .nav-div-2 {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
   }
-  section#navbar nav .ca-tooltip {
-    top: 19px;
+  section#navbar nav .nav-div-3 ul li.nav-cart div.cart-active {
+    top: 8%;
+  }
+  section#navbar nav .nav-div-3 ul li.nav-cart div.ca-tooltip {
+    top: 18px;
     right: 84px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  section#navbar nav .nav-div-4 ul li.nav-cart div.cart-active {
-    left: 10%;
+  section#navbar nav .nav-div-3 ul li.nav-cart div.cart-active {
+    top: 11%;
   }
 }
 
@@ -544,81 +585,196 @@ section#footer div a {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  section#navbar nav .nav-div-1 div input {
-    width: 30px;
-    height: 22px;
-    position: absolute;
-    top: 3px;
-    left: 7px;
-    z-index: 6;
-    opacity: 0;
-    cursor: pointer;
+  section#navbar nav .nav-div-1 div.nav-toggler-icon span {
+    width: 23px;
   }
-  section#navbar nav .nav-div-1 div input :checked ~ span :nth-child(2) {
-    -webkit-transform: rotate(-45deg) translate(4px, -1px);
-            transform: rotate(-45deg) translate(4px, -1px);
-  }
-  section#navbar nav .nav-div-1 div input :checked ~ span :nth-child(4) {
-    -webkit-transform: rotate(-45deg) translate(-1px, 2px);
-            transform: rotate(-45deg) translate(-1px, 2px);
-  }
-  section#navbar nav .nav-div-1 div input :checked ~ span :nth-child(3) {
-    opacity: 0;
-  }
-  section#navbar nav .nav-div-1 div span {
-    -webkit-transform-origin: 5px 0px;
-            transform-origin: 5px 0px;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-  }
-  section#navbar nav .nav-div-1 div :last-child {
+  section#navbar nav .nav-div-1 div.nav-toggler-icon :last-child {
     margin-bottom: 0;
+  }
+  section#navbar nav .nav-div-1 div#sm-navbar {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, 0.55);
+  }
+  section#navbar nav .nav-div-1 div#sm-navbar div.sm-nav-content {
+    height: 100%;
+    background-color: white;
+    width: 70%;
+    padding: 23px 0 0 25px;
+  }
+  section#navbar nav .nav-div-1 div#sm-navbar div.sm-nav-content div.sm-navbar-cancel {
+    position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    left: 3px;
+  }
+  section#navbar nav .nav-div-1 div#sm-navbar div.sm-nav-content ul {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 40px;
+  }
+  section#navbar nav .nav-div-1 div#sm-navbar div.sm-nav-content ul li {
+    padding: 10px 0;
+  }
+  section#navbar nav .nav-div-1 div#sm-navbar div.sm-nav-content ul li a {
+    text-decoration: none;
+    font-weight: 800;
+    color: black;
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+  section#navbar nav .nav-div-1 a.nav-brand {
+    padding: 0;
   }
   section#navbar nav .nav-div-2 {
     display: none;
   }
-  section#navbar nav .nav-div-3 {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease;
+  section#navbar nav .nav-div-3 ul li.nav-cart {
+    margin-right: 20px;
   }
-  section#navbar nav .nav-div-3 div {
-    height: 100%;
-    background-color: var(--color-white);
-    width: 70%;
-    padding: 23px 0 0 25px;
+  section#navbar nav .nav-div-3 ul li.nav-cart div.ca-tooltip {
+    top: 18px;
+    right: 58px;
   }
-  section#navbar nav .nav-div-3 div ul {
-    list-style-type: none;
-    padding: 0;
-    padding-top: 25px;
+  section#navbar nav .nav-div-3 ul li.nav-cart div.cart-active {
+    width: 90%;
+    top: 13%;
+    right: 7%;
   }
-  section#navbar nav .nav-div-3 div ul li {
-    padding: 10px 0;
+  section#navbar nav .nav-div-3 ul li.nav-cart a.nav-link svg path {
+    fill: black;
   }
-  section#navbar nav .nav-div-3 div ul li a {
-    text-decoration: none;
-    font-weight: 800;
-    color: black;
-    font-size: 1.5rem;
+  section#navbar nav .nav-div-3 ul li.nav-avatar a .avatar-img {
+    width: 35px;
   }
-  section#navbar nav .nav-div-3 div ul li a :focus {
-    color: black;
-  }
-}
-
-section#navbar .nav-brand {
-  padding-left: 10px;
-}
-
-section#navbar .avatar-img {
-  width: 35px;
 }
 
 @media screen and (max-width: 768px) {
-  .nav-hr {
+  section#hero div.hero-images {
+    width: 100%;
+  }
+  section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn {
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-column: 1 / end;
+    margin-right: 0;
+  }
+  section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn p {
+    text-align: center;
+  }
+  section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn p.pa-count-sub {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn p.pa-count-value {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  section#hero div.hero-infos div.pt-info div.pt-action div.pa-count-btn p.pa-count-add {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+  }
+  section#hero div.hero-infos div.pt-info div.pt-action div.pt-atc-btn {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    grid-column: 1 / end;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section#hero div.hero-images div.pt-display-img img.pt-img {
     display: none;
+  }
+  section#hero div.hero-images div.pt-display-img div.pt-carousel-outer {
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner {
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.cr-cancel-btn {
+    display: none;
+  }
+  section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.carousel div.ct-carousel-inner div.ct-cr-item img {
+    border: none;
+    border-radius: 0;
+  }
+  section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.carousel button {
+    width: 35px;
+    height: 35px;
+  }
+  section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.carousel button span:first-child {
+    font-size: 16px;
+  }
+  section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.carousel button.cr-prev-btn {
+    margin-left: 20px;
+  }
+  section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.carousel button.cr-next-btn {
+    margin-right: 20px;
+  }
+  section#hero div.hero-images div.pt-display-img div.pt-carousel-outer div.pt-carousel-inner div.cr-thumbnails {
+    display: none;
+  }
+  section#hero div.hero-images div.thumbnails {
+    display: none;
+  }
+  section#hero div.hero-infos {
+    padding-bottom: 20%;
+  }
+  section#hero div.hero-infos div.pt-info h6.pt-company {
+    margin-top: 30px;
+    color: #ff7d1a;
+  }
+  section#hero div.hero-infos div.pt-info h2.pt-title {
+    font-size: 1.8rem;
+  }
+  section#hero div.hero-infos div.pt-info p.pt-description {
+    padding-top: 15px;
+    font-size: 0.9rem;
+  }
+  section#hero div.hero-infos div.pt-info div.pt-price {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section#hero div.hero-infos div.pt-info div.pt-price h5.pt-discount-price {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    font-size: 1.8rem;
+  }
+  section#hero div.hero-infos div.pt-info div.pt-price h6.pt-discount {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-left: 0;
+  }
+  section#hero div.hero-infos div.pt-info div.pt-price h5.pt-original-price {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 9;
+    grid-column: 3/12;
+    text-align: end;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section#navbar {
+    padding: 0;
+  }
+  section#hero {
+    padding: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,13 +2,17 @@ section#hero {
   padding: 8% 8%;
 
   div.hero-images {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+
     div.pt-display-img {
-      margin: auto;
       display: flex;
       justify-content: center;
       cursor: pointer;
 
-      img {
+      img.pt-img {
         @include carousel-image;
       }
 
@@ -49,17 +53,8 @@ section#hero {
             }
 
             button {
-              width: fit-content;
-              height: fit-content;
-              margin: auto;
-              background-color: var(--color-white);
-              width: 50px;
-              height: 50px;
-              border: 1px solid transparent;
-              border-radius: 50%;
+              @include direction-btns;
               margin-left: -25px;
-              opacity: 1;
-
               span:first-child {
                 color: black;
                 font-size: 20px;
@@ -71,15 +66,15 @@ section#hero {
             }
           }
 
-          div.cr-pt-thumbnails {
+          div.cr-thumbnails {
             @include thumbnail-container;
 
-            div {
+            div.cr-th-div {
               @include thumbnail-divs;
               border: 2px solid $color-black-1;
               background-color: white;
 
-              img {
+              img.cr-th-img {
                 width: 100%;
               }
             }
@@ -88,14 +83,14 @@ section#hero {
       }
     }
 
-    div.pt-thumbnails {
+    div.thumbnails {
       @include thumbnail-container;
 
-      div {
+      div.th-div {
         @include thumbnail-divs;
         border: 2px solid transparent;
 
-        img {
+        img.th-img {
           width: 100%;
         }
       }
@@ -103,16 +98,18 @@ section#hero {
   }
 
   div.hero-infos {
+    display: grid;
+
     div.pt-info {
       width: 85%;
       margin: auto;
 
       h6.pt-company {
-        margin-top: 70px;
+        margin-top: 60px;
         font-weight: 800;
         font-size: 14px;
         letter-spacing: 2px;
-        color: var(--p-color-1);
+        color: $primary-color-1;
       }
 
       h2.pt-title {
@@ -127,71 +124,73 @@ section#hero {
       }
 
       div.pt-price {
-        display: flex;
-        align-items: center;
+        display: grid;
         letter-spacing: 1px;
         padding-top: 20px;
+        align-items: center;
 
-        h5 {
+        h5.pt-discount-price {
+          grid-column: 1/2;
           font-weight: 800;
           font-size: 2rem;
         }
 
         h6 {
+          grid-column: 2/20;
+          width: fit-content;
           margin-left: 20px;
-          background-color: var(--p-color-2);
-          color: var(--p-color-1);
+          background-color: $primary-color-2;
+          color: $primary-color-1;
           font-weight: 800;
           padding: 5px 8px;
-          border: 1px solid var(--color-white);
+          border: 1px solid white;
           border-radius: 8px;
         }
-      }
 
-      h5.pt-original-price {
-        color: $color-greyishblue;
-        font-weight: 800;
-        font-size: 1rem;
-        text-decoration: line-through;
+        h5.pt-original-price {
+          color: $color-greyishblue;
+          font-weight: 800;
+          font-size: 1rem;
+          text-decoration: line-through;
+        }
       }
 
       div.pt-action {
         padding-top: 20px;
-        display: flex;
+        display: grid;
         align-items: center;
+        column-gap: 10px;
+        row-gap: 20px;
 
         div.pa-count-btn {
-          display: flex;
+          grid-column: 1/4;
+          display: grid;
+          grid-template-columns: auto auto auto;
           background-color: $color-lightgreyishblue;
           border-left: 1px solid white;
           border-radius: 8px;
-          margin-right: 20px;
+          text-align: center;
 
           p {
-            padding: 15px 25px;
+            padding: 15px 0px;
             font-weight: 800;
             margin: 0;
+            width: 100%;
           }
 
-          .pt-count-add,
-          .pt-count-sub {
+          .pa-count-add,
+          .pa-count-sub {
             cursor: pointer;
 
-            :hover {
-              mask-image: linear-gradient(
-                rgba(255, 255, 255, 0.5),
-                rgba(255, 255, 255, 0.5)
-              );
-              -webkit-mask-image: linear-gradient(
-                rgba(255, 255, 255, 0.5),
-                rgba(255, 255, 255, 0.5)
-              );
+            &:hover {
+              @include btn_mask;
             }
           }
         }
 
         div.pt-atc-btn {
           width: 100%;
+          grid-column: 4/7;
 
           button {
             background-color: $primary-color-1;
@@ -208,15 +207,8 @@ section#hero {
               color: white;
             }
 
-            :hover {
-              mask-image: linear-gradient(
-                rgba(255, 255, 255, 0.5),
-                rgba(255, 255, 255, 0.5)
-              );
-              -webkit-mask-image: linear-gradient(
-                rgba(255, 255, 255, 0.5),
-                rgba(255, 255, 255, 0.5)
-              );
+            &:hover {
+              @include btn_mask;
             }
           }
         }
