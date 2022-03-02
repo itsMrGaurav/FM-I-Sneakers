@@ -3,7 +3,7 @@ const MD_SCR = 768;
 const SM_SCR = 480;
 
 
-// cart related action handlers
+// -------------------------------------cart related action handlers----------------------------------------------
 
 let numOfDiffItemsInCart = 0;
 let totalNumOfItemsInCart = 0
@@ -108,7 +108,8 @@ $('.ca-contents').on('click', '.ca-del-icon', function (e) {
     } 
 });
 
-// sm-menu related action handlers
+// -------------------------------------sm-menu related action handlers ----------------------------------------------
+
 
 // sm-menu show
 $('.nav-toggler-icon').click(function (e) { 
@@ -137,7 +138,7 @@ $('.sm-navbar-cancel').click(function (e) {
 });
 
 
-// carousel related action handlers
+// -------------------------------------carousel related action handlers----------------------------------------------
 
 // show carousel
 $('.pt-img').click(function (e) { 
@@ -162,9 +163,7 @@ $('.cr-cancel-btn').click(function (e) {
     $('.pt-carousel-outer').fadeOut();
 });
 
-
-
-// product thumbnail related action handlers
+// -------------------------------------product thumbnail related action handlers----------------------------------------------
 
 // thumbnail-hover effects
 
