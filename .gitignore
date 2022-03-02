@@ -4,7 +4,7 @@
 #####################################################
 *.sketch
 *.fig
-assets/design
+/assets/design
 
 # Avoid accidental XD upload if you convert the design file
 ###############################################
@@ -17,4 +17,4 @@ assets/design
 .prettierignore
 
 # Avoid sass files
-assets/css/*.scss
+/assets/css/*.scss
