@@ -30,15 +30,22 @@ Users should be able to:
 - View the cart and remove items from it
 
 ### Screenshot
+# DESKTOP-PREVIEW
 
 ![Desktop - Preview](./assets/screenshots/desktop_preview.png)
+
+# LAPTOP-PREVIEW
+
 ![Tablet - Preview](./assets/screenshots/tablet_preview.png)
+
+# MOBILE-PREVIEW
+
 ![Mobile - Preview](./assets/screenshots/mobile_preview.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-standalone-product-showcase-page-TclwAewcc](https://www.frontendmentor.io/solutions/responsive-standalone-product-showcase-page-TclwAewcc)
+- Live Site URL: [https://itskiranay.github.io/FM-I-Sneakers/](https://itskiranay.github.io/FM-I-Sneakers/)
 
 ## My process
 
@@ -77,9 +84,8 @@ A lot more comfortability working with CSS Grids, SCSS and JQuery. Practice is t
 
 ## Author
 
-- Website - [Gaurav Kumar](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@itsKiranay](https://www.frontendmentor.io/profile/@itsKiranay)
+- Twitter - [@theGuy_Kira](https://www.twitter.com/theGuy_Kira)
 
 ## Acknowledgments
 
